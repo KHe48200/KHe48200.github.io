@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Portfolio | Kalle Heini</title>
+    <meta name="author" content="Kalle Heini">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script defer src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+</head>
+
+<body class="light color-a">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="navbar-nav">
+
+            <li class="nav-item">
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#cv">CV</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#aboutme">About me</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item has-dropdown">
+                <a href="#">Theme</a>
+                <ul class="dropdown">
+                    <li class="dropdown-item">
+                        <a id="light" href="#">Light</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a id="dark" href="#">Dark</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a id="solar" href="#">Solarize</a>
+                    </li>
+
+                    <li class="dropdown-item-color">
+                        <a id="color-a" href="#">Color A</a>
+                    </li>
+                    <li class="dropdown-item-color">
+                        <a id="color-b" href="#">Color B</a>
+                    </li>
+                    <li class="dropdown-item-color">
+                        <a id="color-c" href="#">Color C</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Main body of the content -->
+        <div class="bg-opener-border">
+            <div class="bg-opener">
+                <div class="wrapper">
+
+                    <!-- Opener -->
+                    <header class="auto-columns">
+                        <div id="opener-text">
+                            <h1>
+                                Hi,
+                            </h1>
+                            <h1>
+                                I'm
+                            </h1>
+                            <h1 class="text-accent">
+                                Kalle !
+                            </h1>
+                            <h3>I'm an IT Specialist with couple of years of expiriense in tech support and everything
+                                IT.</h3>
+
+                            <h3>I'm also passonate about software development especially mobile, web and UI/UX
+                                development.</h3>
+
+                            <a href="#aboutme">More about me...</a>
+
+                            <a href="#cv">My CV</a>
+
+                        </div>
+                        <div id="opener-img" style="background-image: url('IMG/IMG-20190310-WA0004c.jpg');"></div>
+                    </header>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+
+            <!-- Projects -->
+            <div id="projects">
+
+                <!-- Project 1 -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('IMG/hellocordova.png');"></div>
+                    <div>
+                        <h1>
+                            Hello Cordova
+                        </h1>
+                        <p class="text-accent">
+                            Cordova | Mobile | JavaScript
+                        </p>
+                        <p>
+                            My first Cordova application that consist of different types of timers and counters which
+                            could
+                            be usefull for example when exercising.
+                        </p>
+                        <a class="card-button" href="https://github.com/KHe48200/hellocordova" target="_blank">
+                            More on GitHub >>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('IMG/KanbanApp.png');"></div>
+                    <div>
+                        <h1>
+                            KanbanApp
+                        </h1>
+                        <p class="text-accent">
+                            Mobile | Java | Andrid Studio
+                        </p>
+                        <p>
+                            Simple kanban board application which can be used to manage projects by visualizing their
+                            given
+                            tasks into easy to read columns based on their status.
+                        </p>
+                        <a href="https://github.com/KHe48200/KanbanApp" target="_blank" class="card-button">More on
+                            GitHub >></a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('IMG/MiniatureGolf.png');"></div>
+                    <div>
+                        <h1>
+                            Miniature Golf
+                        </h1>
+                        <p class="text-accent">
+                            Unity | C# | 3D Modeling
+                        </p>
+                        <p>
+                            Fun little miniature golf game with 7 holes to playthrough. This project was originally
+                            started as a part of a game programming course.
+                        </p>
+                        <a href="https://github.com/KHe48200/MiniatureGolf" target="_blank" class="card-button">More on
+                            GitHub >></a>
+                        <a href="https://simmer.io/@KHe1004/miniaturegolf" target="_blank" class="card-button">Play on
+                            Simmer.io >></a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="card">
+                    <div class="card-img" style="background-image: url('IMG/fridgeapp.png');"></div>
+                    <div>
+                        <h1>
+                            FridgeApp
+                        </h1>
+                        <p class="text-accent">
+                            MongoDB | Express.js | Pug | Node.js
+                        </p>
+                        <p>
+                            Web application for keeping track of your groceries and shoppinglist. Built using MongoDB,
+                            Express, Pug and Node. Also started it life as a project for web development course.
+                        </p>
+                        <a href="https://github.com/KHe48200/FridgeApp" target="_blank" class="card-button">More on
+                            GitHub >></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CV -->
+            <div id="cv" class="auto-columns uneven">
+
+                <!-- Education -->
+                <div>
+                    <h2>Education</h2>
+
+                    <div class="cv-list-item">
+                        <p>2010 - 2013</p>
+                        <p class="text-accent">Finnish Matriculation Examination</p>
+                        <p>Kotkan lyseo</p>
+                    </div>
+
+                    <div class="cv-list-item">
+                        <p>2016 - 2019</p>
+                        <p class="text-accent"> Vocational Qualification in Information<br>and Communications Technology
+                        </p>
+                        <p>Etelä-Kymenlaakson ammattiopisto</p>
+                    </div>
+
+                    <h2>Courses</h2>
+
+                    <div class="cv-list-item">
+                        <p>2019</p>
+                        <p class="text-accent">Ohjelmoinnista ammatti, 30 op<br>(Programming as a career, 30 ects)</p>
+                        <p>XAMK</p>
+                    </div>
+
+                    <div class="cv-list-item">
+                        <p>2020</p>
+                        <p class="text-accent">20486: Developing ASP.NET Core<br>MVC Web Applications</p>
+                        <p>Sovelto</p>
+                    </div>
+
+                </div>
+
+                <!-- Experience -->
+                <div>
+                    <h2>Experience</h2>
+
+                    <div class="cv-list-item">
+                        <p>02/2019 - present</p>
+                        <p><span class="text-accent">CADMATIC Oy</span> | IT Specialist</p>
+                        <p>
+                            Technical support, especially in CADMATIC Draw, License Server and licensing matters.
+                            Software testing and writing help articles.
+                        </p>
+                    </div>
+
+                    <div class="cv-list-item">
+                        <p>01/2018 - 01/2019</p>
+                        <p><span class="text-accent">Cursor Oy</span> | IT support</p>
+                        <p>
+                            Solving IT related problems and instructing users.
+                            Deploying and maintaining devices and software for users.
+                        </p>
+                    </div>
+
+                    <div class="cv-list-item">
+                        <p>06/2018 - 08/2018</p>
+                        <p><span class="text-accent">Sonoco Alcore Oy</span> | IT support, summer temp</p>
+                        <p>
+                            Solving IT related problems and instructing users.
+                            Deploying and maintaining devices and software for users.
+                        </p>
+                    </div>
+
+                    <div class="cv-list-item">
+                        <p>09/2017 - 12/2017</p>
+                        <p><span class="text-accent">Levelup Startup Accelerator</span> | Trainee</p>
+                        <p>
+                            Live streaming lectures and taking care of all IT related things.
+                            Day-to-day task of the accelerator (<i>Updating and producing content for website, procuring
+                                merchandise for events...</i>).
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="auto-columns uneven">
+                <h2>Skills & Tools</h2>
+                <p class="text-accent">ASP.NET</p>
+                <p class="text-accent">Node</p>
+                <p class="text-accent">JavaScript, CSS, HTML</p>
+                <p class="text-accent">Android Studio</p>
+                <p class="text-accent">Unity</p>
+                <p class="text-accent">Visual Studio (Code)</p>
+            </div>
+
+            <!-- Doenload CV -->
+            <div class="auto-columns uneven">
+                <h2 class="text-accent">View and download my CV:</h2>
+                <a href="https://drive.google.com/file/d/1x0TfkkF7xY_bSnJaDXC12FaW34KqSs_3/view?usp=sharing"
+                    target="_blank" class="card-button">English</a>
+                <a href="https://drive.google.com/file/d/1fbCFUXjhGcGp0Te1PytmcTDek5TyCMCI/view?usp=sharing"
+                    target="_blank" class="card-button">Finnish</a>
+            </div>
+
+            <!-- About me -->
+            <div class="auto-columns uneven">
+
+                <div id="aboutme">
+
+                    <h1 class="text-accent">About me</h1>
+
+                    <p>
+                        Originally from Kotka, currently living in Joensuu with my partner and our (almost a) year old
+                        daughter.
+                    </p>
+                    <p>Ever since my mom brought home our first computer I've been enchanted by them and especially what
+                        makes programs run, games play and browser show you just the page you requested.</p>
+                    <p>
+                        Because of this fascination I've read numerous books on programming and software development,
+                        taken courses and put my knowledge to test by creating new projects with different tools and
+                        frameworks.
+                    </p>
+                    <p>
+                        I'm looking for opportunities where I can keep learning, improve as a developer and bring my own
+                        enthusiasm and contributions to the table. I'm also always intrested in working with new people
+                        and teams. I don't think there is a better way to acquire new knowledge and skills than to work
+                        with an experiencesd team in your field.
+                    </p>
+                </div>
+
+                <div>
+                    <p>🏋️‍♂️ Fitness</p>
+                    <p>🎣 Fishing</p>
+                    <p>🍺 Homebrewing</p>
+                    <p>📗 Currently reading: House of Leaves</p>
+                    <p>🎵 Currently listening:<a href="https://www.youtube.com/watch?v=wizAwUwdWsY" target="_blank">Mac
+                            DeMarco</a></p>
+                    <p>✈️Last trip: Berlin</p>
+                    <p>✈️ Next trip: TBA</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>&copy;2021 Kalle Heini</footer>
+
+</body>

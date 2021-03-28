@@ -1,0 +1,269 @@
+/* Body, footer, text, links */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: var(--bg-dark);
+    color: var(--text);
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+footer {
+    margin-left: auto; 
+    margin-right: auto; 
+    max-width: 10rem;
+}
+h1, h2, h3, h4, h5, h6, p { 
+    margin: 1rem; 
+}
+a {
+    color: var(--text);
+    text-decoration-color: var(--border-color);
+    text-decoration-thickness: 2px;
+    margin: 1rem;  
+    font-weight: bold; 
+}
+a:hover { background-color: var(--border-color);
+}
+.text-accent { color: var(--border-color);
+}
+
+/* Navbar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+}
+.navbar {
+    height: 70px;
+    width: 100%;
+    background: var(--bg-nav);
+    border-bottom: var(--border-color) solid 2px; 
+}
+.navbar a {
+    color: var(--text-inverse);
+    text-decoration: none; 
+}
+.navbar a:hover {
+    background-color: inherit;
+}
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%; 
+}
+
+
+.dropdown {
+    opacity: 0;
+    z-index: 2;
+    background-color: var(--bg-nav);
+    border-bottom: var(--border-color) solid 2px;
+    border-right: var(--border-color) solid 2px;              
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175em 0.5em;
+    transition: opacity .15s ease-out; 
+
+    position: absolute;
+    transform: translateX(-70%);
+        
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(10rem, 1fr));
+    width: 40%;
+    min-width: 16rem;
+    margin-top: 2rem;
+}   
+        
+.has-dropdown:focus-within .dropdown   {
+    opacity: 1;
+    pointer-events: auto; 
+}
+.dropdown-item, .dropdown-item-color {
+    margin: 0.75rem; 
+}
+.dropdown-item a::before {
+    content: ' ';
+    border: 2px solid;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2rem; 
+}
+.dropdown-item-color a::before {
+    content: ' ';
+    border: 2px solid;
+    width: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2rem; 
+}
+
+/* Main */
+.bg-opener-border { 
+    background-color: var(--border-color); 
+    clip-path: polygon(0% 0%, 50% 0%, 100% 0%, 100% 85%, 20% 99%, 0% 80%);
+    padding-bottom: 2px;
+    margin-bottom: 5rem; 
+} 
+.bg-opener { 
+    background-color: var(--bg-light); 
+    clip-path: polygon(0% 0%, 50% 0%, 100% 0%, 100% 85%, 20% 99%, 0% 80%);
+}
+
+.wrapper {
+    max-width: 65rem;
+    margin-left: auto;
+    margin-right: auto;
+    /*The padding provides a gutter, so at tiny viewports, you get a 1rem sized gap at each side, which is ideal.*/
+    padding: 1rem 1rem;
+}
+
+#opener-img {
+    background-size: cover;
+    max-height: 0;
+    width: 100%;
+    margin: auto;
+	padding-top: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 20% 100%, 0% 80%); 
+}
+#opener-text { 
+    margin: auto 0;
+}
+
+.card, .auto-columns {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(16rem, 1fr));
+    margin-bottom: 5rem;
+    background-color: var(--bg-light);
+}
+.uneven {
+    grid-template-columns: repeat( auto-fit, minmax(16rem, max-content));
+    background: transparent;
+}
+
+.cv-list-item {
+    margin-bottom: 2.5rem;
+}
+
+.card {
+    border-bottom: var(--border-color) solid 2px;
+    border-right: var(--border-color) solid 2px;
+}
+.card-img {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 75%; 
+}
+.card-link {
+    display: inline-block;
+}
+.card-button {
+	border: none;
+	border-radius: 2rem;
+    background-color: var(--text);
+    color: var(--bg-light);
+	padding: 0.5rem 1.5rem;
+	text-align: center;
+	text-decoration: none;
+    display: inline-block; 
+}
+.card-button:hover {
+    background-color: var(--border-color); 
+} 
+
+/* Themes */
+/* Theme changer based on https://www.youtube.com/watch?v=rXuHGLzSmSE */
+:root {
+    --gray0: #f8f8f8;
+    --gray1: #dbe1e8;
+    --gray2: #b2becd;
+    --gray3: #6c7983;
+    --gray4: #454e56;
+    --gray5: #2a2e35;
+    --gray6: #12181b;
+
+    --blue: #0084a5;
+    --purple: #a82dd1;
+    --yellow: #fff565;
+    
+    --sapphire: #126180;
+    --emerald: #50C878;
+    --gold: #d4af37;
+
+    --amethyst: #9966cc;
+    --ruby: #9b111e;
+    --bronze: #cd7f32;
+}
+
+.light {
+    --bg-light: var(--gray0);
+    --bg-dark: linear-gradient(to bottom right, var(--gray1), var(--gray0));
+    --bg-nav: var(--gray5);
+
+    --text: var(--gray6);
+    --text-inverse: var(--gray0);
+
+    --color-a: var(--sapphire);
+    --color-b: var(--emerald);
+    --color-c: var(--gold);
+    
+    --bg-solar: var(--yellow);
+    --solar-border: var(--blue);
+}
+.dark {
+    --bg-light: var(--gray6);
+    --bg-dark: linear-gradient(to bottom right, var(--gray5), var(--gray6));
+    --bg-nav: var(--gray1);
+
+    --text: var(--gray0);
+    --text-inverse: var(--gray6);
+
+    --color-a: var(--amethyst);
+    --color-b: var(--ruby);
+    --color-c: var(--bronze);
+
+    --bg-solar: var(--blue);
+    --solar-border: var(--yellow);
+}
+
+.color-a { 
+    --border-color: var(--color-a); }
+.color-b {    
+    --border-color: var(--color-b); }
+.color-c {    
+    --border-color: var(--color-c); } 
+
+.solar {
+    --gray0: #fbffd4;
+    --gray1: #f7f8d0;
+    --gray2: #b6f880;
+    --gray3: #5ec72d;
+    --gray4: #3ea565;
+    --gray5: #005368;
+    --gray6: #003d4c;
+}
+
+#dark::before {
+    background: var(--gray6);
+    border-color: var(--gray1);
+}
+#light::before {
+    background: var(--gray1);
+    border-color: var(--gray6);
+}
+#solar::before {
+    background: var(--bg-solar);
+    border-color: var(--solar-border);
+}
+
+#color-a::before {
+    border-color: var(--color-a); 
+}
+#color-b::before {
+    border-color: var(--color-b); 
+}
+#color-c::before {
+    border-color: var(--color-c); 
+}
